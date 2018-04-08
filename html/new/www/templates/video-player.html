@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">{{videoPlayerInfo.title}}</h1>
+        <button ng-click="closeModal()" class="button">
+            <i class="icon ion-close"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <video
+                width="100%"
+                height="100%"
+                autoplay="autoplay"
+                controls="controls"
+                ng-src="{{videoPlayerInfo.videos_paths[0]}}">
+        </video>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>E-Stadium testing</title>
+<script type="text/javascript">
+var c=0;
+var t;var timer_is_on=0;
+
+function timedCount()
+{
+document.location.href="estad.php";
+c=c+1;
+t=setTimeout("timedCount()",1000);
+}
+
+function doTimer()
+{
+if (!timer_is_on)
+  {
+  timer_is_on=1;
+  timedCount();
+  }
+}
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+function repeatcopy()
+$(document).ready( function() {
+    setTimeout( function() {
+        $('#some_id').load('index.php');
+    }, 10000);
+});
+</script>
+
+
+
+
+							<input type="submit" value="check every 10 seconds" onClick="doTimer()" />
+
+
+	<p> </a> &nbsp; Sample work for E-stadium</p>
+
+</body>
+</html>

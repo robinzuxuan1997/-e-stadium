@@ -1,0 +1,56 @@
+<?
+include_once(realpath(dirname(__FILE__) . "/../../../../include/Page/class_path.php"));
+$path = new Path();
+include_once($path->getFilePath("class_page"));
+include_once($path->getFilePath("class_session"));
+include_once($path->getFilePath("class_user"));
+
+//////////////////////////////////////////////////////
+// Create Page object
+//////////////////////////////////////////////////////
+
+// NOTE: the Page object is re-created later on if we switch from
+// public mode to admin mode
+$p = new Page("mobile", "registered", "page_concessions_index");
+
+//////////////////////////////////////////////////////
+// Extraneous Setup
+//////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////
+// Register Form variables
+/////////////////////////////////////////////////////
+$p->register("userid",
+             "hidden",
+             array("getset"=>"Userid",
+                   "check_func"=>"isInt",
+                   "error_message"=>"Userid"));
+
+////////////////////////////////////////////////////
+// Determine state based on view
+////////////////////////////////////////////////////
+ switch ($view) {
+   default: $state = "show_index";
+ }
+///////////////////////////////////////////////////
+// Perform actions based on state
+///////////////////////////////////////////////////
+if($state == "show_index") {
+  //query all locations
+  $view = "index";
+}
+
+/////////////////////////////////////////////////////
+// Setup template variables
+/////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////
+// Include templates based on view
+///////////////////////////////////////////////////
+switch($view) {
+  case "index": include($path->getFilePath("template_concessions_location_index"));
+    break;
+  default: include($path->getFilePath("template_undefined"));
+}
+
+

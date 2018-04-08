@@ -1,0 +1,42 @@
+html {
+	height: 100%;
+}
+body{
+	height: 100%;	
+	position: relative;
+}
+#wrapper {
+	-webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    overflow:hidden;
+    position:relative;	/* On older OS versions "position" and "z-index" must be defined (absolute | relative), */
+	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+}
+[data-scroll]{
+	height: 100% !important;
+	min-height: 10px !important;
+}
+#content{
+	height: 100%;
+	
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    
+    position:relative;	/* On older OS versions "position" and "z-index" must be defined (absolute | relative), */
+	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+}
+
+#drive-details{
+    position: absolute;
+	z-index: 100;
+}

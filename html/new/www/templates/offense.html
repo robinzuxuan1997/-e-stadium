@@ -1,0 +1,118 @@
+<ion-view view-title="Offense">
+    <ion-content class="width-desktop-responsive">
+
+      
+<div>
+
+
+          
+       <ul class="list" ng-controller="OffenseCtrl">
+
+        <div class="button-bar">
+          <a class="button" ng-click = "myFilter = 'home'"> <img class="smallTypeImage" ng-src="{{global_data.home_logo_path}}"></a>
+          <a class="button" ng-click = "myFilter = 'away'"> <img class="smallTypeImage" ng-src="{{global_data.away_logo_path}}"></a>
+        </div>
+          
+
+            <li class="item item-divider item-divider-custom">
+                <div class="row">
+                    <div class="col"> <h2 style="text-align: center" class="statsText20"> PASSING </h2></div>
+                </div>
+            </li>
+            <li class="item item-divider">
+                <div class="row">
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText14">Name</h2></div>
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText10">Cmp-Att-Int</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">Yds</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">TD</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">Long</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">Sack</h2></div>
+                </div>
+
+            </li> 
+
+
+            <div ng-repeat ="players in data.passing|filter:myFilter">
+            <li class="item " ng-repeat="player in players.pass_stats">
+                <div class="row">
+
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText12">{{player.name}}</h2></div>
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText12">{{player.cp}} - {{player.att}} - {{player.int}}</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.yds}}</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.tds}}</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.long}}</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.sacks}}</h2></div>
+                </div>
+            </li>
+
+        </div>
+
+          <li class="item item-divider item-divider-custom">
+              <div class="row">
+                <div class="col"> <h2 style="text-align: center" class="statsText20"> RUSHING </h2></div>
+              </div>
+          </li>
+          <li class="item item-divider">
+              <div class="row">
+                  
+                  <div class="col col-25"><h2 style="text-align: center" class="statsText14">Name</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">No.</h2></div>
+                  <div class="col col-15"><h2 style="text-align: center" class="statsText14">Gain</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText12">Loss</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">Net</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">TD</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">Lg</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">Avg</h2></div>
+                  
+              </div>
+          </li> 
+
+          <div ng-repeat = "players in data.rushing|filter:myFilter">
+          <li class="item " ng-repeat="player in players.rush_stats">
+              <div class="row">
+                  
+                  <div class="col col-25"><h2 style="text-align: center" class="statsText12">{{player.name}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.att}}</h2></div>
+                  <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.gain}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.loss}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.yds}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.tds}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.long}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText12">{{player.avg | number:1}}</h2></div>
+                  
+              </div>
+          </li> 
+          </div>
+
+        <li class="item item-divider item-divider-custom">
+              <div class="row">
+                <div class="col"> <h2 style="text-align: center" class="statsText20"> RECEIVING </h2></div>
+              </div>
+        </li>
+          <li class="item item-divider">
+              <div class="row">
+                  
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">Name</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">No.</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">Yds</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">TD</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">Long</h2></div>
+              </div>
+          </li> 
+
+          <div ng-repeat = "players in data.receiving|filter: myFilter" >
+          <li class="item " ng-repeat="player in players.rec_stats">
+              <div class="row">
+                  
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText12">{{player.name}}</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">{{player.rec}}</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">{{player.yds}}</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">{{player.tds}}</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">{{player.long}}</h2></div>
+                  
+              </div>
+          </li>
+          </div>
+          </ul>
+    </ion-content>
+</ion-view>

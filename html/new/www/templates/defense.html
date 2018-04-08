@@ -1,0 +1,45 @@
+<ion-view view-title="Defense">
+    <ion-content class="width-desktop-responsive">
+       
+
+      <ul class="list" ng-controller="DefenseCtrl">
+
+<div class="button-bar">
+  <a class="button" ng-click = "myFilter = 'home'"> <img class="smallTypeImage" ng-src="{{global_data.home_logo_path}}"></a>
+  <a class="button" ng-click = "myFilter = 'away'"> <img class="smallTypeImage" ng-src="{{global_data.away_logo_path}}"></a>
+</div>
+    
+          <li class="item item-divider">
+              <div class="row">
+                  
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">Name</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">Solo</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">Ast</h2></div>
+                  <div class="col col-15"><h2 style="text-align: center" class="statsText14">Total</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">TFL/Yds</h2></div>
+                  <div class="col col-15"><h2 style="text-align: center" class="statsText14">Sack/Yds</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">Int-Yds</h2></div>
+                  
+              </div>
+          </li>	
+
+          <div ng-repeat = "players in data.statistics|filter:myFilter">
+          <li class="item " ng-repeat="player in players.stats">
+              <div class="row">
+                  
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText12">{{player.name}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.tkua}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.tka}}</h2></div>
+                  <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.tkls}}</h2></div>
+                  <div class="col col-20"><h2 style="text-align: center" class="statsText14">{{player.tfl}}/{{player.tflyds}}</h2></div>
+                  <div class="col col-15"><h2 style="text-align: center" class="statsText14">{{player.sks}}/{{player.skyds}}</h2></div>
+                  <div class="col col-10"><h2 style="text-align: center" class="statsText14">{{player.int}}/{{player.intyds}}</h2></div>
+                  
+              </div>
+          </li>	
+           
+        </div>
+        </ul>
+        
+    </ion-content>
+</ion-view>

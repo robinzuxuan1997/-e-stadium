@@ -1,0 +1,57 @@
+<?php include_once(realpath(dirname(__FILE__) . 
+"/../../Page/class_path.php")); $path = new Path(); 
+include_once($path->getFilePath("class_check")); 
+include_once($path->getFilePath("class_setup")); 
+include_once($path->getFilePath("class_game")); 
+include_once($path->getFilePath("class_play")); 
+include_once($path->getFilePath("class_team")); 
+include_once($path->getFilePath("class_page"));
+
+$setup = new Setup();
+$setup->loadCurrent();
+
+$game = new Game($setup->getActiveGameID());
+
+$gid = $setup->getActiveGameID();
+
+$pl = new Play();
+$pl = $pl->findMostRecentPlayByGameID($gid);
+
+$currentdrive = $pl->getDriveNo();
+
+if(isset($_GET['drive']) && $_GET['drive'] > 0 
+                         && $_GET['drive'] <= $currentdrive )
+{
+   $drive = $_GET['drive'];
+   echo  "<img src=\"image.php?drive=" . ($drive) . "\">";
+   if ($drive > 1)
+     echo '<br><a href="index.php?drive='.($drive-1).'">Previous</a> | ';
+   else
+     echo '<br>Previous | ';
+   echo '<a href="index.php">Back to Menu</a> | ';
+   if ($drive != $currentdrive) 
+     echo '<a href="index.php?drive='.($drive+1).'">Next</a>';  
+   else
+     echo 'Next';
+}
+else
+{
+
+$p = new Page("mobile", "public", "page_gameviz");
+
+$home = new Team($game->getTeamID());
+$away = new Team($game->getVisitorID());
+
+$p->startTemplate();
+?>
+
+<center><font class="mobile_h1"><u>Game Day Visualization</u><br><br></font></center>
+<ul>
+  <li><a class="mainmenu" 
+href="index.php?drive=<?=$currentdrive?>">Current Drive</a></li>  
+</ul>
+
+<?php
+$p->close();
+}
+?>

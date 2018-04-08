@@ -1,0 +1,92 @@
+/*
+ Document   : scoreBorad
+ Created on : Aug 30, 2010, 8:19:55 PM
+ Author     : arnaldo
+ Description:
+ Purpose of the stylesheet follows.
+ */
+/*
+ TODO customize this sample style
+ Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+ */
+div.score_board {
+    width: 100%;
+    margin: 0 -2;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+div.score_board {
+    background: 0540a6;
+    border: solid
+    1px;
+}
+
+div.score_board table {
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
+}
+
+table.main_score {
+    color: white;
+}
+
+table.score_board_table, table.main_score {
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+}
+
+table.score_board_table td, table.main_score td {
+    text-align: center;
+}
+
+table.score_board_table td.score_board_quarter {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+table.score_board_table td.score_board_total {
+    padding-left: 10px;
+}
+
+table.score_board_table td.team_acronym {
+    padding-left: 0px;
+}
+
+/*table.score_board_table td.team_acronym, table.score_board_table td.score_board_quarter, table.score_board_table td.score_board_total{
+ background-color: #3300FF;
+ color: white;
+ }*/
+table.score_board_table {
+    /*color: black;
+     background-color: #eee354;	*/
+    color: black;
+    text-shadow: rgba(26, 3, 248, 0.3) 0px -1px 0px;
+    background-color: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f3eeee), color-stop(0.5, #f6f2f2), color-stop(0.5, #f4f0f0));
+}
+
+table.score_board_table td.score_board_quarter_label{
+    background-color: #0540A6;
+    color: white;
+	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+}
+
+table.score_board_table td.has_ball{
+    padding: 0px;
+    text-align: right;
+}
+
+td.logo_img_small{
+    width: 36px;
+    height: 36px;
+}
+
+table.score_board_table td.game_status_text{
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+

@@ -1,0 +1,54 @@
+<ion-view view-title="Play By Play">
+    <ion-content class="width-desktop-responsive">
+        <div class="button-bar">
+            <a class="button" ng-repeat="quarter in quarters" ng-click="tabClicked(quarter)">Q{{quarter}}</a>
+        </div>
+        <ul class="list">
+            <li class="item item-divider">
+                <div class="row">
+                    <div class="col" ng-show="current_quarter">
+                        <h3 align="center" class="smallerText">
+                            <b> <u>{{current_quarter == 1 ? 'FIRST' : current_quarter == 2 ? 'SECOND'
+                                : current_quarter == 3 ? 'THIRD' : 'FOURTH'}}
+                                QUARTER </u> </b>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-20"><h2 align="center">Team</h2></div>
+                    <div class="col col-20"><h2 align="center">Type</h2></div>
+                    <div class="col col-50 col-offset-10"><h2 align="center">Description</h2></div>
+                </div>
+            </li>
+            <li ng-repeat="item in per_tab_data" class="item wrapText" ng-click="item.videos ?
+            openModal(item.text, item.videos) : null">
+                <div class="row">
+                    <div class="col col-20" align="center">
+                        <img class="smallTypeImage"
+                             ng-src="{{item.ball == 'H' ? global_data.home_logo_path : global_data.away_logo_path}}">
+                        <div>
+                            <img ng-show="item.videos" class="verySmallImage" ng-src="img/video-icon-2.png">
+                        </div>
+                    </div>
+                    <div class="col col-20" align="center">
+                        <h2 align="center" ng-show="item.image_path === undefined">
+                            {{item.type == 'E' ?
+                            'Penalty' : (item.type == '' && item.text.indexOf('drive start') != -1) ?
+                            'Drive Start' : (item.type == '#') ? item.text.indexOf('quarter') != -1 ? 'Quarter Start' :
+                            item.text.indexOf('Timeout') != -1 ?
+                            'Timeout' : item.text.indexOf('End of game' != -1) ? 'Game Ended' : '-' : '-'}}
+                        </h2>
+                        <div align="center">
+                            <img ng-show="item.image_path !== undefined" class="smallTypeImage"
+                                 ng-src="{{item.image_path}}">
+                        </div>
+                    </div>
+
+                    <div class="col col-50 col-offset-10">
+                        {{item.text}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

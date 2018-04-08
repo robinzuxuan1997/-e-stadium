@@ -1,0 +1,21 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Time machine</h1>
+        <button ng-click="closeModal()" class="button">
+            <i class="icon ion-close"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Game Id" ng-model="game_id">
+            </label>
+            <label class="item">
+                <button class="button button-block button-assertive" ng-click="historyConfirmed(game_id)">Apply</button>
+            </label>
+            <label class="item">
+                <button class="button button-block button-yellowblack" ng-click="revertConfirmed()">Revert to ongoing game</button>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>

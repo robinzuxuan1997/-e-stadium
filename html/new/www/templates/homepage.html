@@ -1,0 +1,122 @@
+<ion-view view-title="Game Summary">
+    <ion-content class="width-desktop-responsive">
+        <div class="row responsive-sm">
+            <div class="col col-60">
+                <div class="row">
+
+                    <div class="col card">
+                        <div class="row">
+                            <div class="col-10">
+                                <img class="scorecardImage" ng-src="{{global_data.home_logo_path}}">
+                            </div>
+                            <div class="col-10">
+
+                                <img ng-show="global_data.home_ball_possession && global_data.show_ball"
+                                     style="margin-left: 30%; margin-top: 5%; height: 30px; width: 30px" 
+                                     src="img/possession.png">
+                            </div>
+                            <div class="col-20" align="left">
+                                <h1 class="smallText" style="margin-top: auto">{{global_data.home_score}}</h1>
+                            </div>
+                            <div class="col-20" align="center">
+                                <h2 class="smallText" style="margin-top: auto" ng-hide="global_data.quarter == 'Qnull'">
+                                    {{global_data.quarter}}
+                                </h2>
+                                <h3 class="smallText" ng-show="global_data.time_left != '-'">
+                                    {{global_data.time_left}}
+                                </h3>
+                            </div>
+                            <div class="col-20" align="right">
+                                <h1 class="smallText" style="margin-top: auto">{{global_data.away_score}}</h1>
+                            </div>
+                            <div class="col-10">
+                                <img ng-show="!global_data.home_ball_possession && global_data.show_ball"
+                                     style="margin-left: 30%; margin-top: 5%; height: 30px; width: 30px" 
+                                     src="img/possession.png">
+                            </div>
+                            <div class="col-10">
+                                <img class="scorecardImage" ng-src="{{global_data.away_logo_path}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card">
+            <div class="row">
+
+                <div class="col col-33" class="no-padding"></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">Q1</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">Q2</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">Q3</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">Q4</h3></div>
+
+                <div ng-hide="hide_over_Q" class="col">
+                    <h3 class="smallerText" align="center">OverQ</h3>
+                </div>
+            </div>
+            <hr style =  "border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))">
+            <div class="row">
+
+                <div class="col col-33" class="no-padding"><h3 class="smallerText">{{global_data.home_name}}<br><h5 class="smallerText">{{global_data.gt_record}}</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">{{global_data.home_quarter_scores.Q1}}</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">{{global_data.home_quarter_scores.Q2}}</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">{{global_data.home_quarter_scores.Q3}}</h3></div>
+                <div class="col" class="no-padding"><h3 class="smallerText" align="center">{{global_data.home_quarter_scores.Q4}}</h3></div>
+
+                <div ng-hide="hide_over_Q" class="col">
+                    <h3 class="smallerText" align="center">{{global_data.home_quarter_scores.OverQ}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-33"><h3 class="smallerText">{{global_data.away_name}}<br><h5 class="smallerText">{{global_data.away_record}}</h3></div>
+
+                <div class="col"><h3 class="smallerText" align="center">{{global_data.away_quarter_scores.Q1}}</h3></div>
+                <div class="col"><h3 class="smallerText" align="center">{{global_data.away_quarter_scores.Q2}}</h3></div>
+                <div class="col"><h3 class="smallerText" align="center">{{global_data.away_quarter_scores.Q3}}</h3></div>
+                <div class="col"><h3 class="smallerText" align="center">{{global_data.away_quarter_scores.Q4}}</h3></div>
+                <div ng-hide="hide_over_Q" class="col">
+                    <h3 class="smallerText" align="center">{{global_data.away_quarter_scores.OverQ}}</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <ul class="list">
+            <li class="item item-divider" ng-repeat-start="(key, value) in data">
+                <div class="row">
+                    <div class="col col-15" align="center"><h2 class="largerText">Team</h2></div>
+                    <div class="col col-15" align="center"><h2 class="largerText">Q{{key}}</h2></div>
+                    <div class="col col-50" align="center"><h2 class="largerText">Description</h2></div>
+                    <div class="col col-10" align="center"><h2 class="largerText">{{global_data.home_acronym}}</h2></div>
+                    <div class="col col-10" align="center"><h2 class="largerText">{{global_data.away_acronym}}</h2></div>
+                </div>
+            </li>
+            <li class="item" ng-repeat="item in value" ng-click="openModal(item.Text, [item.Video])">
+                <div class="row">
+                    <div class="col col-15" align="center">
+                        <img class="smallTypeImage"
+                             ng-src="{{item.Team == global_data.home_id ? global_data.home_logo_path : global_data.away_logo_path}}">
+                    </div>
+                    <div class="col col-15">
+                        <h2 align="center" class="largerText">{{item.ClockTime}}</h2>
+                        <div align="center">
+                            <img class="verySmallImage" ng-src="img/video-icon-2.png">
+                        </div>
+                    </div>
+
+                    <div class="col col-50" align="justify">
+                        <h2 class="largerText">{{item.Text}}</h2>
+                    </div>
+                    <div class="col col-10"><h2 align="center" class="largerText">{{item.HScore}}</h2></div>
+                    <div class="col col-10"><h2 align="center" class="largerText">{{item.VScore}}</h2></div>
+                </div>
+            </li>
+            <li ng-repeat-end></li>
+        </ul>
+
+
+    </ion-content>
+</ion-view>

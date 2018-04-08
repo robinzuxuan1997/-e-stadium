@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Game Day Video Timestamp Updater</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+    <div class="container" style="padding-top:50px;">
+	    <h3>
+		  Game Day Video Timestamp Updater
+		  <small class="text-muted">Enter Game ID and calendar year</small>
+		</h3>
+	    <form>
+		  <div class="form-group">
+		    <label for="gameidsearch">Game ID</label>
+		    <input type="text" class="form-control" id="gameidsearch" name="gameidsearch" placeholder="Enter Game ID">
+		  </div>
+		  <div class="form-group">
+		    <label for="yearSelected">Year</label>
+		    <input type="text" class="form-control" name="yearSelected" id="yearSelected" placeholder="Enter Year (e.g 2017)">
+		  </div>
+		  <button type="button" id="update_btn" class="btn btn-primary">Update</button>
+		</form>
+    
+		<div id="alarms" style="margin-top:20px;">
+			
+		</div>
+    </div>
+	
+	
+	<script>
+		$(document).ready(function() {
+			
+			$('#update_btn').click(function() {
+				$('#alarms').html('Please wait for a while');
+				var gameid = $('#gameidsearch').val();
+				var year = $('#yearSelected').val();
+				$.ajax({
+			      type: 'POST',
+			      url: 'test_timestamps_alt.php',
+			      data: {gameidsearch: gameid, yearSelected: year},
+			      success: function(data) { 
+				      if (!data.includes('Successfully')) {
+					    $('#alarms').html('<div class="alert alert-danger alert-dismissible fade show" role="alert">'+data+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');  
+				      } else {
+				      	$('#alarms').html('<div class="alert alert-success alert-dismissible fade show" role="alert">'+data+'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+				      }
+				  },
+				  error: function(jqXHR, textStatus, errorThrown) {
+					  alert(textStatus);
+				  }
+				});	
+			});
+			
+
+		});
+	</script>
+	
+	
+  </body>
+  
+</html>

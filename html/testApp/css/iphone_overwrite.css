@@ -1,0 +1,26 @@
+
+.claro .mblheading{
+   background-color: #065aed;
+   background: -webkit-gradient(linear, left top, left bottom, from(#065aed), to(#03245e), color-stop(0.5, #0544b1), color-stop(0.5, #0540a6));
+    
+}
+
+body.claro{
+	background-color: #0540a6;
+}
+
+.claro .mblview{
+	background-color: #0540a6;
+}
+
+.claro .mbllistitem{
+	color: black;
+	text-shadow: rgba(26,3,248, 0.3) 0px -1px 0px;
+	background-color: #ffffff;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f3eeee), color-stop(0.5, #f6f2f2), color-stop(0.5, #f4f0f0));
+}
+
+.claro .mblEdgeToEdgeList, .claro .mbledgetoedgelist{
+	background-color: #0540a6;
+}
+

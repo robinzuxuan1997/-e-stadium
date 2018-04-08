@@ -1,0 +1,85 @@
+/* 
+    Document   : this
+    Created on : Jan 10, 2010, 9:39:00 AM
+    Author     : arnaldo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body.fullscreen #home .info {
+    display: none;
+    font-size: large;
+    color: white;
+}
+
+h2{
+	color: white;
+}
+
+#about {
+    padding: 100px 10px 40px;
+    text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
+    font-size: 13px;
+    text-align: center;
+    background: #161618;
+}
+#about p {
+    margin-bottom: 8px;
+}
+#about a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+tbody{
+    color: #fff;
+    border: 1px solid #333333;
+    margin-top: 0;
+    padding:0;
+    margin: 15px 10px 17px 10px;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 3px;
+}
+
+tr:first-child{
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+
+tr:last-child{
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+
+td, th{
+    font-size: 18px;
+    text-align: left;
+    color: #fff;
+    border-top: 1px solid #333;
+    border-bottom: #555858;
+    list-style-type: none;
+    padding: 10px 10px 10px 10px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    overflow: hidden;
+}
+
+.rowhighlight > *{
+    font-weight: bolder;
+    font-size: 12px;
+    text-align: left;
+}
+
+.centered > li > div{
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+

@@ -1,0 +1,124 @@
+<?php
+include_once(realpath(dirname(__FILE__) . "/../include/Page/class_path.php"));
+$path = new Path();
+include_once($path->getFilePath("class_page"));
+include_once($path->getFilePath("class_setup"));
+include_once($path->getFilePath("class_game"));
+
+$p = new Page("mobile", "public", "page_index");
+
+$s = new Setup();
+$s->loadCurrent();
+$game = new Game($s->getActiveGameID());
+$gameid = $game->getID();
+$homeid = $game->getTeamID();
+$awayid = $game->getVisitorID();
+$home = new Team($homeid);
+$away = new Team($awayid);
+$homename = $home->getName();
+$awayname = $away->getName();
+
+$p->startTemplate();
+
+?>
+
+<html>
+<head>
+<title>eStadium Georgia Tech</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<LINK href="../html/favicon.ico" type=image/x-icon rel="Shortcut Icon">
+
+
+<style type="text/css">
+ @import url('style_mobile.css');
+#score_board_container table tr td {
+	text-align: center;
+	vertical-align: middle;
+}
+#score_table {
+	font-size: 9px;
+}
+#score_table {
+	font-size: 9px;
+}
+</style>
+
+<!-- End Save for Web Styles -->
+</head>
+<body style="background-color:#FFFFFF; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;">
+
+<!-- Save for Web Slices (estadium_home.psd - Slices: 00, 01, 02, 04, 05, 06, 07, 08) -->
+<div id="main_container">
+	<div id="welcome_container">
+		<img src="home_images/estadium_home_01.jpg" width="320" height="36" alt="" />
+	</div>
+
+	<div id="score_board_container">
+    <table width="320" border="0">
+  <tr>
+    <td width="50" height="40" id="visitor_logo"><img src="/images/team_logos/GT_logo_small.gif" width="36" height="36"></td>
+    <td width="68" id="visitor_name">Georgia Tech</td>
+    <td width="59">&nbsp;</td>
+    <td width="71" id="home_name">Wake Forest</td>
+    <td width="50" id="home_logo"><img src="/images/team_logos/WF_logo_small.gif" width="36" height="36"></td>
+  </tr>
+  <tr>
+    <td height="21">&nbsp;</td>
+   
+    <td id="visitor_times_out"><img src="home_images/three_dots.jpg" width="68" height="21"></td>
+    <td id="time_left">12:00</td>
+    <td id="home_times_out"><img src="home_images/two_dots.jpg" width="68" height="21" alt=".."></td>
+        <td>&nbsp;</td>
+  </tr>
+</table>
+<table width="320" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="79" rowspan="3">&nbsp;</td>
+    <td width="37">&nbsp;</td>
+    <td width="25">Q1</td>
+    <td width="25">Q2</td>
+    <td width="25">Q3</td>
+    <td width="25">Q4</td>
+    <td width="74" rowspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td id="visitor_team_init">GT</td>
+    <td id="vistor_q1">0</td>
+    <td id="vistor_q2">0</td>
+    <td id="vistor_q3">0</td>
+    <td id="vistor_q4">0</td>
+    </tr>
+  <tr>
+    <td id="home_team_init">WF</td>
+    <td id="home_q1">0</td>
+    <td id="home_q2">0</td>
+    <td id="home_q3">0</td>
+    <td id="home_q4">0</td>
+    </tr>
+</table>
+  </div>
+        
+	<div id="content_container">
+            <div id="content">
+            	<table border="0" cellpadding="0">
+  <tr>
+    <td class="link">Live Game of the Yellow Jackets</td>
+  </tr>
+  <tr>
+    <td class="link">Other Live Games of the NCAA</td>
+    </tr>
+  <tr>
+    <td class="link">Old Games</td>
+    </tr>
+</table>
+            </div>
+	</div>
+    
+	<div id="copyright_container">
+            <img src="home_images/copyright.jpg" width="320" height="30" alt="" />
+	</div>
+</div>
+<!-- End Save for Web Slices -->
+</body>
+</html>

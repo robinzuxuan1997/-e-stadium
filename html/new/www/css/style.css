@@ -1,0 +1,300 @@
+html * {
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+ion-nav-bar * {
+    font-weight: bold !important;
+    font-size: 23px !important;
+}
+
+.big_image {
+    width: 50%;
+    height: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+    /*.width-desktop-responsive {*/
+        /*margin-left: 20%;*/
+        /*margin-right: 20%;*/
+    /*}*/
+}
+
+.no-padding {
+    padding:0!important;
+}
+
+
+.black-border {
+	border-style:none;
+}
+
+.card {
+	background-color:rgb(245,245,245);
+}
+
+.homeLogo{
+    width: 100%;
+}
+
+.awayLogo {
+    width: 100%;
+}
+
+.awayLogoRow {
+    top: 0%;
+}
+
+.verySmallImage {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+@media screen and (max-width: 600px) and (min-width: 100px) {
+    .smallText{
+        font-size: 22px !important;
+
+    }
+    .smallerText{
+        font-size: 15px !important;
+
+    }
+
+    .item h2{
+        font-size: 10px;
+        overflow: scroll;
+        white-space: normal;
+    }
+
+    .smallLogo{
+        width: 110%;
+        padding: 0px;
+    }
+}
+
+.smallTypeImage {
+    width: 40px;
+    height: 40px;
+}
+
+.scorecardImage {
+    width: 50px;
+    height: 50px;
+}
+
+
+.tinyPossessionImage {
+    width: 10%;
+    height: 10%;
+    margin-left: 30%;
+    margin-top: 30%;
+}
+
+.item h2.largerText{
+    white-space: normal;
+    font-size: 15px;
+    overflow: scroll;
+}
+
+/*This is the font we used to use for all the offense/defense page texts*/
+.item h2.statsText{
+    white-space: normal;
+    font-size: 10px;
+    overflow: scroll;
+    font-weight: bold;
+}
+
+/*I'll just throw a few different font sizes for item h2 here. Pick the one that looks best. --Li */
+/*This change is kinda rush and temporary. Remember to tweak the expressions to make it look better*/
+.item h2.statsText10{
+    white-space: normal;
+    font-size: 10px;
+    overflow: scroll;
+    font-weight: bold;
+}
+.item h2.statsText12{
+    white-space: normal;
+    font-size: 12px;
+    overflow: scroll;
+    font-weight: bold;
+}
+.item h2.statsText14{
+    white-space: normal;
+    font-size: 14px;
+    overflow: scroll;
+    font-weight: bold;
+}
+.item h2.statsText16{
+    white-space: normal;
+    font-size: 16px;
+    overflow: scroll;
+    font-weight: bold;
+}
+.item h2.statsText20{
+    white-space: normal;
+    font-size: 20px;
+    overflow: scroll;
+    font-weight: bold;
+}
+/*The additional temporary fonts end here*/
+
+
+
+.wrapText{
+    overflow: scroll;
+    white-space: normal;
+}
+
+.item-divider-custom {
+	background-color: #f5d376;
+    border-top: thin solid black;
+    border-bottom: thin solid black;
+}
+
+.item-divider-nonshaded {
+    border-top: thin solid black;
+    border-bottom: thin solid black;
+}
+
+.bordered {
+    border-bottom: thin solid black;
+    border-left: thin solid black;
+    border-right: thin solid black;
+}
+
+.noMargin {
+    margin-bottom: 0;
+}
+
+
+.middleAlign {
+    margin-top: 50%;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+.centerAlign {
+    text-align: center;
+}
+
+/*Blackyellow = Yellow font on black background*/
+.bar-blackyellow .button {
+    border-color: #262626;
+    background-color: #262626;
+    color: #eeb211; }
+.bar-blackyellow .button:hover {
+    color: #eeb211;
+    text-decoration: none; }
+.bar-blackyellow .button.active, .bar-positive .button.activated {
+    border-color: #262626;
+    background-color: #262626;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+.bar-blackyellow .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #eeb211;
+    font-size: 17px; }
+.bar-blackyellow .button.button-icon {
+    border-color: transparent;
+    background: none; }
+.bar.bar-blackyellow {
+    border-color: #262626;
+    background-color: #262626;
+    background-image: linear-gradient(0deg, #262626, #262626 50%, transparent 50%);
+    color: #eeb211; }
+.bar.bar-blackyellow .title {
+    color: #eeb211; }
+.bar.bar-blackyellow.bar-footer {
+    background-image: linear-gradient(180deg, #262626, #262626 50%, transparent 50%); }
+
+/*Yellowblack = black font on yellow background*/
+.bar-yellowblack .button {
+    border-color: #eeb211;
+    background-color: #eeb211;
+    color: #262626; }
+.bar-yellowblack .button:hover {
+    color: #eeb211;
+    text-decoration: none; }
+.bar-yellowblack .button.active, .bar-positive .button.activated {
+    border-color: #eeb211;
+    background-color: #eeb211;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+.bar-yellowblack .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #262626;
+    font-size: 17px; }
+.bar-yellowblack .button.button-icon {
+    border-color: transparent;
+    background: none; }
+.bar.bar-yellowblack {
+    border-color: #eeb211;
+    background-color: #eeb211;
+    background-image: linear-gradient(0deg, #eeb211, #eeb211 50%, transparent 50%);
+    color: #262626; }
+.bar.bar-yellowblack .title {
+    color: #262626; }
+.bar.bar-yellowblack.bar-footer {
+    background-image: linear-gradient(180deg, #eeb211, #eeb211 50%, transparent 50%); }
+
+.button.button-yellowblack {
+    border-color: #eeb211;
+    background-color: #eeb211;
+    color: #262626; }
+.button.button-yellowblack:hover {
+    color: #262626;
+    text-decoration: none; }
+.button.button-yellowblack.active, .button.button-positive.activated {
+    border-color: #eeb211;
+    background-color: #eeb211;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+.button.button-yellowblack.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #eeb211; }
+.button.button-yellowblack.button-icon {
+    border-color: transparent;
+    background: none; }
+.button.button-yellowblack.button-outline {
+    border-color: #eeb211;
+    background: transparent;
+    color: #eeb211; }
+.button.button-yellowblack.button-outline.active, .button.button-positive.button-outline.activated {
+    background-color: #eeb211;
+    box-shadow: none;
+    color: #262626; }
+
+
+@media (min-width: 680px) {
+    .modal {
+        right: 20%;
+        bottom: 7% ;
+        left: 20%;
+        overflow: visible;
+        width: 60%;
+        background-color: transparent; }
+    .modal.ng-leave-active {
+        bottom: 0; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {
+        height: 44px; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {
+        margin-top: 0; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .tabs-top > .tabs, .platform-ios.platform-cordova .modal-wrapper .modal .tabs.tabs-top {
+        top: 44px; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .has-header, .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {
+        top: 44px; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .has-subheader {
+        top: 88px; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .has-tabs-top {
+        top: 93px; }
+    .platform-ios.platform-cordova .modal-wrapper .modal .has-header.has-subheader.has-tabs-top {
+        top: 137px; } }
+

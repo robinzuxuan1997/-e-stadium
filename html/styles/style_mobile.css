@@ -1,0 +1,153 @@
+body
+{
+  text-align:center;
+  margin:0px;
+  padding:0px;
+  font-family:Tahoma, Arial, Serif;
+  font-size:xx-small;
+}
+
+div.body
+{
+  text-align:center;
+  margin:0px;
+  padding:0px;
+  font-family:Tahoma, Arial, Serif;
+  font-size:xx-small;
+}
+
+table
+{
+  margin:0px;
+  padding:0px;
+  font-family:Tahoma, Arial, Serif;
+  font-size:xx-small;
+}
+
+table.outerTable
+{
+  padding-right:0px;
+  padding-left:0px;
+  padding-bottom:0px;
+  margin:0px;
+  padding-top:0px;
+}
+
+th
+{
+  background-color: #CCCCCC;
+  font-weight: bold;
+}
+
+img.headerImage
+{
+  border-width:0px;
+}
+
+font.mobile_h1, .mobile_h1
+{
+  font: normal bold 10pt/10pt Tahoma,Arial,Serif;
+}
+
+font.mobile_h2, .mobile_h2
+{
+  font: normal bold 8pt/8pt Tahoma,Arial,Serif;
+}
+
+a.mainmenu
+{
+  font: normal bold 10pt/12pt Tahoma,Arial,Serif;
+}
+
+a.footer
+{
+  font: normal none 8pt/8pt Tahoma,Arial,Serif;
+  color: #EEEEEE;
+}
+
+td.footer
+{
+  font: normal none 8pt/8pt Tahoma,Arial,Serif;
+  color: #EEEEEE;
+}
+
+a.video
+{
+  font: normal normal 10pt/10pt Tahoma,Arial,Serif;
+}
+
+a.small
+{
+  font: normal normal 8pt/8pt Tahoma,Arial,Serif;
+}
+
+a.normal
+{
+  font: normal normal 10pt/10pt Tahoma,Arial,Serif;
+}
+
+a
+{
+  font: normal normal 10pt/10pt Tahoma,Arial,Serif;
+}
+
+td.mobileAltDark
+{
+  background-color:#CCCCCC;
+}
+
+td.mobileAltLight
+{
+  background-color:#FFFFFF;
+}
+
+font.playByPlay
+{
+  font: normal normal 10pt/10pt Tahoma,Arial,Serif;
+}
+
+font.normal, .normal
+{
+  font: normal normal 10pt/10pt Tahoma,Arial,Serif;
+}
+
+font.small, .small
+{
+  font: normal normal 8pt/8pt Tahoma,Arial,Serif;
+}
+
+img.teamlogo
+{
+  border-width: 0px;
+}
+
+
+ul
+{
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 25px;
+}
+
+form
+{
+  margin: 0px;
+}
+
+select
+{
+  font-family:Tahoma, Arial, Serif;
+  font-size:xx-small;
+}
+
+input
+{
+  font-family:Tahoma, Arial, Serif;
+  font-size:xx-small;
+}
+
+.form_label
+{
+  font: normal bold 9pt/9pt Tahoma,Arial,serif;
+}

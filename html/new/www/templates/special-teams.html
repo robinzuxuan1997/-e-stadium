@@ -1,0 +1,191 @@
+<ion-view view-title="Special Teams">
+    <ion-content class="width-desktop-responsive">
+        <div style="text-align: center"></div>
+
+        <ul class="list" ng-controller="SpecialTeamsCtrl">
+
+            <div class="button-bar">
+                <a class="button" ng-click="myFilter = 'home'"> <img class="smallTypeImage"
+                                                                     ng-src="{{global_data.home_logo_path}}"></a>
+                <a class="button" ng-click="myFilter = 'away'"> <img class="smallTypeImage"
+                                                                     ng-src="{{global_data.away_logo_path}}"></a>
+            </div>
+
+
+            <li class="item item-divider item-divider-custom">
+                <div class="row">
+                    <div class="col"><h2 style="text-align: center" class="statsText"> PUNTING </h2></div>
+                </div>
+            </li>
+            <li class="item item-divider">
+                <div class="row">
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText">Name</h2></div>
+                    <div class="col col-10"><h2 style="text-align: center" class="statsText">No.</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText">Yds</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText">Avg </h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText">Long</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText">In20</h2></div>
+                    <div class="col col-15"><h2 style="text-align: center" class="statsText">TB</h2></div>
+                </div>
+            </li>
+
+
+            <div ng-repeat="players in data.punting|filter:myFilter">
+                <li class="item " ng-repeat="player in players.stats">
+                    <div class="row">
+                        <div class="col col-15"><h2 style="text-align: center" class="statsText">{{player.name}}</h2>
+                        </div>
+                        <div class="col col-10"><h2 style="text-align: center" class="statsText">{{player.punt}}</h2>
+                        </div>
+                        <div class="col col-15"><h2 style="text-align: center" class="statsText">{{player.yds}}</h2>
+                        </div>
+                        <div class="col col-15"><h2 style="text-align: center" class="statsText">{{player.avg}}</h2>
+                        </div>
+                        <div class="col col-15"><h2 style="text-align: center" class="statsText">{{player.long}}</h2>
+                        </div>
+                        <div class="col col-15"><h2 style="text-align: center" class="statsText">
+                            {{player.puntin20}}</h2></div>
+                        <div class="col col-15"><h2 style="text-align: center" class="statsText">{{player.punttb}}</h2>
+                        </div>
+
+                    </div>
+                </li>
+            </div>
+
+
+            <li class="item item-divider item-divider-custom">
+                <div class="row">
+                    <div class="col"><h2 style="text-align: center" class="statsText"> ALL RETURNS </h2></div>
+                </div>
+            </li>
+            <li class="item item-divider">
+                <div class="row">
+
+                    <div class="col col-25"><h2 style="text-align: center" class="statsText"></h2></div>
+                    <div class="col col-25"><h2 style="text-align: center" class="statsText">Punts</h2></div>
+                    <div class="col col-25"><h2 style="text-align: center" class="statsText">Kickoffs</h2></div>
+                    <div class="col col-25"><h2 style="text-align: center" class="statsText">Interceptions</h2></div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col col-25"><h2 style="text-align: center" class="statsText">Name</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">No.</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">Yds</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">Lg</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">No. </h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">Yds</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">Lg</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">No.</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">Yds</h2></div>
+                    <div class="col col-8.33"><h2 style="text-align: center" class="statsText">Lg</h2></div>
+
+                </div>
+            </li>
+
+            <div ng-repeat="players in data.returns|filter:myFilter">
+                <li class="item " ng-repeat="player in players.stats">
+                    <div class="row">
+
+                        <div class="col col-25"><h2 style="text-align: center" class="statsText">{{player.name}}</h2>
+                        </div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.puntret ===
+                            undefined? '0':player.puntret}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.puntyds ===
+                            undefined? '0' : player.puntyds}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.puntlong ===
+                            undefined? '0' : player.puntlong}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.kickret ===
+                            undefined ? '0' : player.kickret}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.kickyds ===
+                            undefined ? '0' : player.kickyds}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.kicklong ===
+                            undefined ? '0' : player.kickyds}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.intret ===
+                            undefined ? '0' : player.intret}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.intyds ===
+                            undefined ? '0' : player.intyds}}</h2></div>
+                        <div class="col col-8.33"><h2 style="text-align: center" class="statsText">{{player.intlong ===
+                            undefined ? '0' : player.intlong}}</h2></div>
+                    </div>
+                </li>
+
+            </div>
+
+
+            <li class="item item-divider item-divider-custom">
+                <div class="row">
+                    <div class="col"><h2 style="text-align: center" class="statsText"> FIELD GOAL ATTEMPTS </h2></div>
+                </div>
+            </li>
+            <li class="item item-divider">
+                <div class="row">
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText">Name</h2></div>
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText">Qtr</h2></div>
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText">Time</h2></div>
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText">Distance</h2></div>
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText">Result</h2></div>
+                </div>
+            </li>
+
+            <div ng-repeat="players in data.FGA|filter:myFilter">
+                <li class="item " ng-repeat="player in players.stats">
+                    <div class="row">
+
+                        <div class="col col-20"><h2 style="text-align: center" class="statsText">{{player.name}}</h2>
+                        </div>
+                        <div class="col col-20"><h2 style="text-align: center" class="statsText">{{player.qtr}}</h2>
+                        </div>
+                        <div class="col col-20"><h2 style="text-align: center" class="statsText">{{player.time}}</h2>
+                        </div>
+                        <div class="col col-20"><h2 style="text-align: center" class="statsText">{{player.dist}}</h2>
+                        </div>
+                        <div class="col col-20"><h2 style="text-align: center" class="statsText">{{player.result}}</h2>
+                        </div>
+                    </div>
+                </li>
+            </div>
+
+
+            <li class="item item-divider item-divider-custom">
+                <div class="row">
+                    <div class="col"><h2 style="text-align: center" class="statsText"> KICKOFFS </h2></div>
+                </div>
+            </li>
+            <li class="item item-divider">
+                <div class="row">
+                    <div class="col col-20"><h2 style="text-align: center" class="statsText">Name</h2></div>
+                    <div class="col col-16"><h2 style="text-align: center" class="statsText">No.</h2></div>
+                    <div class="col col-16"><h2 style="text-align: center" class="statsText">Yds</h2></div>
+                    <div class="col col-16"><h2 style="text-align: center" class="statsText">TB</h2></div>
+                    <div class="col col-16"><h2 style="text-align: center" class="statsText">OB</h2></div>
+                    <div class="col col-16"><h2 style="text-align: center" class="statsText">Avg.</h2></div>
+                </div>
+            </li>
+
+
+            <div ng-repeat="players in data.kickoffs|filter:myFilter">
+                <li class="item " ng-repeat="player in players.stats">
+                    <div class="row">
+                        <div class="col col-20"><h2 style="text-align: center" class="statsText">{{player.name}}</h2>
+                        </div>
+                        <div class="col col-16"><h2 style="text-align: center" class="statsText">
+                            {{player.kickoffcnt}}</h2></div>
+                        <div class="col col-16"><h2 style="text-align: center" class="statsText">
+                            {{player.kickoffyds}}</h2></div>
+                        <div class="col col-16"><h2 style="text-align: center" class="statsText">
+                            {{player.kickofftb}}</h2></div>
+                        <div class="col col-16"><h2 style="text-align: center" class="statsText">
+                            {{player.kickoffob}}</h2></div>
+                        <div class="col col-16">
+                            <h2 style="text-align: center" class="statsText">
+                                {{player.kickoffyds/player.kickoffcnt | number:1}}
+                            </h2>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </ul>
+
+    </ion-content>
+</ion-view>

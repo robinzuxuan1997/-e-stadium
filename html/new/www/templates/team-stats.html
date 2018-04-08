@@ -1,0 +1,43 @@
+<ion-view view-title="Team Stats">
+    <ion-content class="width-desktop-responsive">
+
+        <br>
+        <div style="border-right: thin solid black; border-left: thin solid black; border-top: thin solid black">
+            <div class="row">
+                <div class="col col-20" align="right">
+                    <img class="smallTypeImage" ng-src="{{global_data.home_logo_path}}">
+                </div>
+
+                <div class="col col-40 col-offset-10" align="center">
+                    <h3><b> Statistics </b></h3>
+                </div>
+
+                <div class="col col-20 col-offset-10" align="left">
+                    <img class="smallTypeImage" ng-src="{{global_data.away_logo_path}}">
+                </div>
+            </div>
+
+            <div class="row {{item.header?'item-divider-custom':'item-divider item-divider-nonshaded'}}"
+                 ng-repeat="item in data.home_stats">
+                <div class="col col-20" align="right">
+                    {{item.data}}
+                    <br>
+                </div>
+
+
+                <div class="col col-40 col-offset-10" align="center"
+                     style="vertical-align: middle">
+                    {{item.label}}
+                    <br>
+                </div>
+
+
+                <div class="col col-20 col-offset-10" align="left">
+                    {{data.away_stats[$index].data}}
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+    </ion-content>
+</ion-view>

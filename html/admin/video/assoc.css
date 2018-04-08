@@ -1,0 +1,17 @@
+#a {
+	
+	width: 100%;
+	height: 100%;	
+}
+#assoc-table-header{
+	display: box;
+    box-orient: horizontal;
+}
+.assoc-table-header div{
+	float: left;
+	background-color: blue;	
+	width: 200px;
+}
+.playscol button{
+	/*width: 150px;	*/
+}

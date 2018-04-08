@@ -1,0 +1,232 @@
+@CHARSET "UTF-8";
+/**big fonts */
+th {
+    font-size: 21px;
+    font-weight: bolder;
+    padding: 1px;
+}
+
+td {
+    font-size: 19px;
+    font-weight: bold;
+    padding: 1px;
+}
+
+/**end big fonts */
+#main ul li {
+    font-size: 1.3em;
+}
+
+.pad_bot {
+    height: 10px;
+}
+
+.videoicon {
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+    float: left;
+}
+
+.other_quarter {
+    float: right;
+}
+
+li.video {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:active, a:visited, a:link {
+    text-decoration: none;
+}
+
+ul, ul.mbledgetoedgelist {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.stats_table {
+    width: 100%;
+}
+
+.stats_table td{
+	font-size: 16px;
+}
+
+.stats_table th {
+    background-color: #c5ccd3;
+}
+
+.stats_table tr {
+    text-align: left;
+    background-color: #f5f9b8;
+}
+
+#drivetracker-headering {
+    border: 0;
+    margin: 5px;
+    padding: 5px;
+}
+
+#drivetracker-heading-filler {
+    min-height: 30px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+#drivetracker-drivename {
+    float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.drivetracker-filler {
+    float: left;
+    height: 10px;
+}
+
+#drivetracker-update {
+    float: right;
+    width: 50px;
+    text-align: center;
+}
+
+#drivetracker-drives {
+    width: 100%;
+}
+
+#sportheader {
+    display: inline-box;
+    display: -moz-inline-box;
+    display: -webkit-inline-box;
+    box-orient: horizonal;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal box-pack:center;
+    -moz-box-pack: center;
+    -webkit-box-orient: center;
+}
+
+#sportheader div {
+    /*list-style-type: none;*/
+    min-width: 40px;
+    text-align: center;
+}
+
+#othergamesContent table {
+    border: 1px solid #789DB3;
+    width: 100%;
+}
+
+#othergamesContent tr {
+    background-color: white;
+}
+
+.other-game-score-box tr {
+    background-color: white;
+    border: black;
+}
+
+.other-game-score-box ul li {
+    list-style-type: none;
+}
+
+.ehire-ad {
+    width: 100%;
+    height: 40px;
+    background-image: url('extras/bg_1px.png');
+    background-repeat: repeat-x;
+}
+
+.ehire-ad div {
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*score tables style*/
+table.score_game {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.score_game .game_status {
+    background-color: #bbc673;
+}
+
+table.score_game .visitor_name {
+    background-color: #aeaead;
+}
+
+table.score_game .visitor_score {
+    background-color: #c4ca80;
+    width: 45px;
+}
+
+table.score_game .home_name {
+    background-color: #c7c7c6;
+}
+
+table.score_game .home_score {
+    background-color: #d4d990;
+    width: 45px;
+}
+
+/* end score tables style*/
+/** play by play style */
+table.plays_table,
+table.videos_table {
+    width: 100%;
+}
+
+/** end play by play style */
+
+.under_blue{
+	background-color: #bbc673;
+}
+
+tr.odd {
+    background-color: #c4ca80;
+}
+
+tr.even {
+    background-color: #d4d990;
+}
+
+tr.odd td, tr.even td {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.full_width{
+	width: 100%;
+}
+
+#videos-filter{
+	display: box;
+	box-orient: horizontal;	
+}
+.videos-filter-cols,
+#videos-filter select{
+	width: 100%;
+}
+.search-btn{
+	width: 45px;	
+}
+
+#videos-filter[hide]{
+	display: none;	
+}
+
+.content-wait{
+	/*color: white;	*/
+}

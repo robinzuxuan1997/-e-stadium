@@ -1,0 +1,926 @@
+html{
+    /*background: #F0F0F0;*/
+    /*background-color: #eeeeee;*/
+background-color:#eeeeee;
+    /*background: -moz-linear-gradient(center top , #EEEEEE, #DDDDDD) repeat scroll 0 0 #F0F0F0;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#EEE),color-stop(1,#DDD));
+    */
+    
+}
+
+ul.menu {
+    list-style: none; /*no bullets*/
+    background: #e4c250;
+    overflow:auto; /*span it it out */
+    padding:0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+ul.menu li {
+    display: inline; /* line up the list items horizontally*/
+    padding:0;
+    margin:0;
+    
+    
+    
+}
+ul.menu li a{
+    padding: 10px 20px;
+    background: #e4c250;
+    color:#fff;
+    text-decoration: none;
+    display:block;
+    float:left;
+    
+    
+}
+ul.menu li a:hover{
+    background: #FFD700;
+}
+
+
+
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	font-family:helvetica;
+/*	padding-bottom:44px;	/*	This prevents the scroller to lock if the user swipes down outside of the screen.
+							 	NOT needed if in home screen mode and on Android. */
+    width: 100%;
+}
+
+
+#header {
+	width:100%;
+	height:45px;
+	line-height:45px;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #FFFFFF), color-stop(0.05, #C0C0C0), color-stop(1, #FFFFFF));
+	background-image:-moz-linear-gradient(top, #FFFFFF, #C0C0C0 05%, #FFFFFF);
+	border-bottom:1px solid #ccc;
+	/* color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e)); */
+	padding:0;
+	color:#000000;
+	
+	font-size: 2.5em;
+	font-weight: bolder;
+	-webkit-text-stroke: 1px black; color: #00223E;
+	-moz-text-stroke: 1px black; color: #00223E;
+	text-align:center;
+}
+
+#header a {
+	color:#f3f3f3;
+	text-decoration:none;
+	font-weight:bold;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+}
+
+#wrapper {
+	width:100%;
+	background:#aaa;
+}
+
+#content{
+	width:100%;
+	background:#aaa;
+}
+
+#wrapper ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	text-align:left;
+}
+
+#wrapper li {
+	padding:0 10px;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+}
+
+#wrapper li > a {
+	display:block;
+}
+
+#homepage {
+	
+}
+
+.scores-table{
+    font-weight: bold;
+}
+.sum-score{
+    font-weight: bold;
+}
+#playbyplay {
+	
+}
+.pagetrans {
+	cursor:pointer;
+}
+
+#footer {
+	width:100%;
+	/*background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.32, #666), color-stop(1, #222));*/
+	padding:0;
+	/*border-top:1px solid #444;*/
+	color: white;
+	
+	background-color: transparent;
+}
+
+#footer-top{
+	width: 100%;
+	height: 35px;
+	text-shadow: black 0.1em 0.1em 0.2em;	
+	display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+}
+
+#footer .pagetrans{
+	background-color: #dab846;	
+	color: white;
+}
+#footer .pagetrans a{
+	color: white;
+	text-decoration: none;
+	/*font-size: 1.8em;*/
+	font-size: 2.0em;
+}
+#footer .goleft {
+	
+}
+#footer .foot-top-filler{
+	width: 20px;	
+}
+#footer .foot-top-pages{
+	background-color: #dab846;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+	
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: center;
+    font-size: 1.7em;
+}
+#footer .footcenter{
+	-webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+	
+	margin-left: auto !important;
+	margin-right: auto !important;
+
+	background-color: #e4c250;
+	text-align: center;
+}
+#footer .goright {
+	text-align: right;
+}
+#footer-bottom{
+	width: 100%;	
+	background-color: white;
+	color: black;
+	
+	display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+}
+#footer .home{
+
+}
+
+#footer .home-score{
+	display: inline-block;	
+}
+#footer .home-logo {
+	display: inline-block;	
+}
+#footer .away{
+	text-align: right;	
+}
+#footer .home-score{
+	padding-left: 10px;
+	padding-right: 5px;
+	margin-top: 5px;
+	height: 100% !important;
+}
+#footer .home-logo {
+	vertical-align: top;	
+}
+#footer .away-score{
+	padding-right: 10px;
+	padding-left: 5px;
+	margin-top: 5px;
+}
+#footer .away-logo {
+	vertical-align: top;	
+}
+#footer .away-logo, 
+#footer .away-score{
+	display: inline-block;	
+}
+#footer .away-score,
+#footer .home-score{
+	font-size: 1.8em;
+	font-weight: bold;	
+}
+#footer .page-list-indicators{
+	display: inline-block;	
+}
+#footer .page-indicator{
+	display: inline;	
+}
+#footer .current-page{
+	-webkit-text-stroke: 3px white; color: #white;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+#footer .game-period{
+	-webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    
+    display: inline-box;
+    
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	
+	font-weight: 600;
+	font-size: 2.0em;
+}
+.game-time, .game-quarter {
+	font-weight: 800;
+	font-size: 0.8em;
+	padding-left: 4px;
+	padding-right: 4px;
+	color:#000;
+	display: inline;
+}
+.home-logo, .away-logo{
+	width: 32px;
+	height: 32px;	
+	display: inline;
+}
+#wrapper-footer{
+	z-index: 110;
+	position: absolute:
+	left: 0px;
+	top: 0px;
+	height: 60px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+}
+#menu-cont{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	
+	
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	margin-left: auto;
+	margin-right: auto;		
+	margin-top: 0;
+	margin-bottom: 0;
+	
+	max-width: 250px;
+	
+	padding: 0px;
+	border: 10px solid #e4c250;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	
+	background-color: white;
+}
+#menu ul {
+	padding: 0px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+.hidden {
+	display: none;
+}
+
+#menu ul {
+	list-style:none;
+	margin:0;
+	width:auto;
+	text-align:left;
+}
+
+#menu li {
+	padding:0 10px;
+	padding-left: 32px;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #e4c250;
+	border-top:1px solid white;
+	background-color:#fafafa;
+	font-size:14px;
+	
+	background-repeat: no-repeat;
+	background-position: 0px 5px;
+}
+
+#menu li > a {
+	display:block;
+	font-size: 1.8em;
+	font-style: normal;
+	font-weight: 500;
+	text-decoration: none;
+	color: black;
+}
+
+.homepageitem{
+	background-image: url(images/main_icons/Home.png);	
+}
+.playbyplayitem{
+	background-image: url(images/main_icons/PlayByPlay.png);	
+}
+.statsitem{
+	background-image: url(images/main_icons/Stats.png);	
+}
+.drivetrackeritem{
+	background-image: url(images/main_icons/DriveTracker.png);	
+}
+.otherscoresitem{
+	background-image: url(images/main_icons/OtherScores.png);	
+}
+.weatheritem{
+	background-image: url(images/main_icons/Weather.png);	
+}
+.askthecoachitem{
+	background-image: url(images/main_icons/Home.png);	
+}
+.concessionsitem{
+	background-image: url(images/main_icons/Home.png);	
+}
+.tugofwaritem{
+	background-image: url(images/main_icons/Home.png);	
+}
+/*
+Arrows
+*/
+.arrow-n,
+.arrow-e,
+.arrow-s,
+.arrow-w {
+  /*
+   * In Internet Explorer, The"border-style: dashed" will never be
+   * rendered unless "(width * 5) >= border-width" is true.
+   * Since "width" is set to "0", the "dashed-border" remains
+   * invisible to the user, which renders the border just like how
+   * "border-color: transparent" renders.
+   */
+  border-style: outset;
+  border-color: transparent;
+  border-width: 0.53em;
+  display: -moz-inline-box;
+  display: inline-block;
+  /* Use font-size to control the size of the arrow. */
+  font-size: 1em;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 0;
+}
+
+.arrow-n {
+  border-bottom-width: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff;
+  bottom: 0.25em;
+}
+
+.arrow-e {
+  border-left-width: 1em;
+  border-left-style: solid;
+  border-left-color: #666;
+  left: 0.25em;
+}
+                    
+.arrow-s {
+  border-top-width: 1em;
+  border-top-style: solid;
+  border-top-color: #ffffff;
+  top: 0.25em;
+}
+
+.arrow-w {
+  border-right-width: 1em;
+  border-right-style: solid;
+  border-right-color: #666;
+  right: 0.25em;
+}
+
+/**
+ehire ad
+*/
+.ehire-ad {
+	height: 20px;
+	color: white;	
+	background-color: black;
+	text-align: center;
+	/*background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #C0C0C0), color-stop(0.65, #000000), color-stop(1, #FFFFFF);*/
+	background-image:-moz-linear-gradient(top, #FFFFFF, #C0C0C0 05%, 0, #FFFFFF);
+}
+.ipad-icon {
+	vertical-align: middle;
+	height: 20px;
+}
+.ehire-logo{
+	width: 32px;
+	height: 20px;
+	vertical-align: middle;
+}
+.ehire-ad a,
+.ehire-ad a:visited,
+.ehire-ad a:hover,
+.ehire-ad a:active
+{
+	text-decoration: none;
+	color: white !important;
+	height: 50%;	
+	font-size: 1.3em;
+	text-shadow: none !important;
+	font-weight: normal !important;
+}
+
+table .theading{
+    text-align: left;
+}
+table .didx{
+    width: 20px;
+}
+table .team{
+    width: 30px;
+}
+/*
+Stats
+*/
+
+.stats_table {
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.stats_table td{
+	/*font-size: 16px;*/
+	
+}
+
+.stats_table th {
+    background-color: #c5ccd3;
+}
+
+.stats_table tr {
+    text-align: left;
+    /*background-color: #f5f9b8;*/
+    background-color: white;
+}
+
+.accordion .head{
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #FFFFFF), color-stop(0.05, #C0C0C0), color-stop(1, #FFFFFF));
+	background-image:-moz-linear-gradient(top, #FFFFFF, #C0C0C0 05%, #FFFFFF);
+	border-bottom:1px solid #ccc;
+
+	align: middle;
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+/*
+Play by play
+*/
+/** play by play style */
+table.plays_table,
+table.videos_table {
+    width: 100%;
+}
+
+/** end play by play style */
+
+.under_blue{
+	/*background-color: #bbc673;*/
+	background-color: #c9c9c9;
+}
+
+tr.odd {
+    /*background-color: #c4ca80;*/
+}
+
+tr.even {
+    /*background-color: #d4d990;*/
+}
+
+tr.odd td, tr.even td {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.full_width{
+	width: 100%;
+}
+/*
+Play by play
+*/
+#playbyplayContent{
+	font-size: 1.3em;	
+}
+#playbyplay-quarter{
+	width: 100%;	
+}
+#playbyplay-filter{
+	display: box;
+	box-orient: horizontal;	
+}
+.playbyplay-filter-cols,
+#playbyplay-filter select{
+	width: 100%;
+}
+.search-btn{
+	/*width: 45px;	*/
+}
+
+#playbyplay-filter[hide]{
+	display: none;	
+}
+
+.content-wait{
+	/*color: white;	*/
+}
+#playbyplay-quarter{
+	margin-left: 5px;	
+	display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+    
+    
+}
+#playbyplay-quarter .ui-select{
+	width: 90px;	
+}
+#quarter-label{
+	display: inline-block;	
+	vertical-align: middle;
+	font-size: 1.3em;
+}
+#quarter-choices{
+	display: inline-block;	
+	vertical-align: middle;
+}
+.toggle-filter {
+    display: inline-block;
+}
+
+/* Play by play row */
+.play-row{
+
+}
+.play-vid-preview{
+    display: inline-block;
+    min-width: 50px;
+    min-height: 50px;
+}
+.dash_play-vid-preview{
+    display: inline-block;
+    min-width: 24px;
+    min-height: 24px;
+}
+.dash_play-vid-filler{
+    min-width: 24px;
+    min-height: 24px;
+    display: inline-block;
+}
+.play-vid-filler{
+    min-width: 50px;
+    min-height: 50px;
+    display: inline-block;
+}
+.play-content{
+    white-space:normal; 
+}
+.play-detail{
+    white-space:normal; 
+    word-wrap: break-word;
+}
+
+/*
+Video Layer
+*/
+#video-layer{
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	
+	margin: 0;
+	padding: 0;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 111;
+}
+
+object{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 111;
+}
+
+#video-layer #video-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*float: right;*/
+    z-index: 200;
+}
+/* Drive tracker */
+#field-container{
+/*	display: -webkit-box;*/
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+
+/*    display: -moz-box; */
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+
+/*    display: box; */
+    box-orient: horizontal;
+    box-align: stretch;
+}
+
+#drive-details{
+	margin: 0;
+	padding: 0;
+	
+	background-color: white;
+	
+	border: 5px solid #e4c250;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#play-detail-buttons{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+}
+#play-detail-buttons button{
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    
+    width: 23%;
+}
+
+.summary,.recentplay{
+    font-size: 1.3em;
+}
+.summary a{
+    text-decoration: none;
+    color: black;
+}
+.summary .playbyplay-cell {
+    cursor: pointer;
+}
+#stats .head{
+    font-size: 1.3em;
+}
+
+
+/*
+Drivetracker
+*/
+#drivetracker-driveheading{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+}
+
+#drivetracker-headering {
+    border: 0;
+    margin: 5px;
+    padding: 5px;
+}
+
+#drivetracker-heading-filler {
+    min-height: 30px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+#drivetracker-drivename {
+    /*float: left;*/
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    vertical-align: middle;
+    text-align: center;
+    
+    font-size: 1.5em;
+}
+
+.drivetracker-filler {
+    /*float: left;*/
+    height: 10px;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+}
+
+#drivetracker-update {
+    /*float: right;*/
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#drivetracker-drivelist{
+    font-size: 1.5em;
+    /*font-weight: bold;*/
+
+}
+#drivetracker-legend{
+    font-weight: bold;
+}
+#drivetracker-drives{
+    border-spacing: 0;
+    width: 100%;
+}
+#drivetracker-drives th{
+    padding: 2px;
+}
+#drivetracker-drives td{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+#drivetracker-drives td{
+ /*   margin-top: 10px;
+    margin-bottom: 10px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#drivetracker-drives .threading + tr td{
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: black;
+}
+
+#dash-nav {
+	width:auto;
+	margin:10px;
+}
+
+#dash-nav ul {
+ list-style-type: none
+}
+
+#dash-nav li {
+float: left;
+padding-right:10px;
+}
+
+#dash-nav li a {
+	display:block;
+	padding:4px;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#dash-nav li a.dncp {
+	background:#000000;
+	color:#E0AA0F;
+}
+
+#dash-nav li a.dummy {
+	background:#E0AA0F;
+	color:#000;
+}
+
+
+td.qscore {
+text-align:center;
+}
+
+table.dash-stats th {
+background: #E0AA0F;
+color:#000;
+font-weight:bold;
+}
+
+table.dash-stats th.qheader {
+font-size:1.5em;
+}
+
+tr.playrow td {
+	font-weight:bold;
+}
+
+table.dash-stats th.grey {
+background: #CCCCCC;
+font-weight:bold;
+color:#000;
+}
+
+table.dash-stats .playbyplay-cell
+{
+	cursor:default;
+}
+
+
+table.teamscore div.home-score, table.teamscore div.away-score {
+font-weight:bold;
+font-size:2em;
+}

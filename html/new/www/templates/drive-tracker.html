@@ -1,0 +1,48 @@
+<ion-view view-title="Drive Tracker">
+    <ion-content class="width-desktop-responsive">
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Drive
+            </div>
+            <select ng-model="current_drive"
+                    ng-options="item.label for item in all_drives"
+                    ng-change="optionClicked(all_drives.indexOf(current_drive))">
+            </select>
+        </label>
+
+        <div align="center">
+            <div class="button-bar" align="center" ng-show="current_drive_image"
+                 ng-style="{width: imageWidth + 'px'}">
+                <button class="button icon-left ion-android-arrow-back"
+                        ng-click="optionClicked(current_drive_index - 1)"
+                        ng-disabled="current_drive_index - 1 < 0">
+                    Previous Drive
+                </button>
+                <button class="button icon-right ion-android-arrow-forward"
+                        ng-click="optionClicked(current_drive_index + 1)"
+                        ng-disabled="current_drive_index == all_drives.length - 1">
+                    Next Drive
+                </button>
+                <br>
+            </div>
+            <img id="driveImage" ng-src="{{current_drive_image}}"/>
+        </div>
+
+        <div class="row">
+            <div class="col">Rush</div>
+            <div class="col">Pass</div>
+            <div class="col">Incomplete Pass</div>
+            <div class="col">Penalty</div>
+            <div class="col">Punt or Kickoff</div>
+            <div class="col">Fumble or Interception</div>
+        </div>
+        <div class="row">
+            <div class="col"><img ng-src="{{host + '/images/drivetracker/legend/legend_rush.png'}}"></div>
+            <div class="col"><img ng-src="{{host + '/images/drivetracker/legend/legend_pass.png'}}"></div>
+            <div class="col"><img ng-src="{{host + '/images/drivetracker/legend/legend_incomplete.png'}}"></div>
+            <div class="col"><img ng-src="{{host + '/images/drivetracker/legend/legend_penalty.png'}}"></div>
+            <div class="col"><img ng-src="{{host + '/images/drivetracker/legend/legend_kickoff.png'}}"></div>
+            <div class="col"><img ng-src="{{host + '/images/drivetracker/legend/legend_fumble.png'}}"></div>
+        </div>
+    </ion-content>
+</ion-view>

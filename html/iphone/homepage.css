@@ -1,0 +1,43 @@
+.scores-table {
+	width: 100%;
+	max-width: 350px;	
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	
+	font-size: 1.5em;
+}
+
+.scores-table th {
+	text-align: left;	
+}
+
+.recentplay {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	font-size: 1.2em;
+}
+.recentplay-inner{
+	margin-left: auto;
+	margin-right: auto;
+	/*width: auto;*/
+	display: inline-block;
+}
+
+.summary table th{
+	text-align: left;	
+}
+
+.logo {
+	width: 24px;
+	height: 24px;	
+}
+
+.vidpreview{
+	width: 24px;
+	height: 24px;	
+}

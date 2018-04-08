@@ -1,0 +1,12 @@
+.centertd {
+text-align:center;
+}
+
+td.dashrow1 { background-color: #dddddd; font-weight:bold}
+
+
+td.dashrow2 { background-color: #cccccc; font-weight:bold}
+
+td.boldtd {
+	font-weight:bold;
+}

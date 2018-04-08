@@ -1,0 +1,11 @@
+.ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page{
+	position: static;	
+}
+
+#drive-details .ui-btn{
+    display: inline-block;
+    margin: .3em 2px;
+}
+#drive-details .ui-btn-inner{
+    padding: .4em 12px;
+}
